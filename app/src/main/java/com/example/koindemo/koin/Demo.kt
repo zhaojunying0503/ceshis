@@ -1,10 +1,10 @@
 package com.example.koindemo.koin
 
-interface  HelloReposity{
-    fun giveHello():String
+interface HelloReposity {
+    fun giveHello(): String
 }
 
-class HelloReposityImpl :HelloReposity{
+class HelloReposityImpl : HelloReposity {
     override fun giveHello() = "hello"
 
 }

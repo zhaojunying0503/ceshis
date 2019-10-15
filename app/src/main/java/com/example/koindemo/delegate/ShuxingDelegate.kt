@@ -3,7 +3,9 @@ package com.example.koindemo.delegate
 import kotlin.properties.Delegates
 import kotlin.reflect.KProperty
 
-class Example {var p: String by Delegate()}
+class Example {
+    var p: String by Delegate()
+}
 
 
 class Delegate {
@@ -37,8 +39,7 @@ fun main(args: Array<String>) {
 }
 
 class User {
-    var name: String by Delegates.observable("<no name>") {
-            prop, old, new ->
+    var name: String by Delegates.observable("<no name>") { prop, old, new ->
         println("$old -> $new")
     }
 }

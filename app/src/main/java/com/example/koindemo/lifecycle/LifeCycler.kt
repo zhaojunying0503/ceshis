@@ -11,9 +11,9 @@ class LifeCyclerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
 
-        var myObserver = MyObserver(lifecycle,object: Callback {
+        var myObserver = MyObserver(lifecycle, object : Callback {
             override fun update(str: String) {
-                Toast.makeText(this@LifeCyclerActivity, str+"Toast", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@LifeCyclerActivity, str + "Toast", Toast.LENGTH_SHORT).show()
             }
         })
         lifecycle.addObserver(myObserver)
